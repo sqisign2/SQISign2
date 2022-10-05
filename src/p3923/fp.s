@@ -264,7 +264,7 @@ fp2_mul_c0:
     mov    rdx, r11                // rdx <- z0 
     MULADD64x192 [rip+p_plus_1+8], r12, r8, r9, r10, r13, r14
 
-	// Final correction                        /////////////////////// COULD THIS ME REMOVED? RANGE TO [0, 2p]?
+	// Final correction                        
 	mov    rsi, [rip+p]
 	mov    rcx, [rip+p+8]
 	mov    rdx, [rip+p+16]
@@ -351,7 +351,7 @@ fp2_mul_c1:
     mov    rdx, r11                // rdx <- z0 
     MULADD64x192 [rip+p_plus_1+8], r12, r8, r9, r10, r13, r14
 
-	// Final correction                        /////////////////////// COULD THIS ME REMOVED? RANGE TO [0, 2p]?
+	// Final correction                        
 	mov    rsi, [rip+p]
 	mov    rcx, [rip+p+8]
 	mov    rdx, [rip+p+16]
@@ -471,7 +471,7 @@ fp2_sq_c0:
 
     FPMUL256x256 [rdi], [rdi+32], r8, r9, r10, r11, r12, r13, rcx
 
-	// Final correction                        /////////////////////// COULD THIS ME REMOVED? RANGE TO [0, 2p]?
+	// Final correction                        
 	mov    rsi, [rip+p]
 	mov    rcx, [rip+p+8]
 	mov    rdx, [rip+p+16]
@@ -536,7 +536,7 @@ fp2_sq_c1:
 	FPMUL256x256 [rsp], [rsi+32], r8, r9, r10, r11, r12, r13, rcx
 	add    rsp, 32
 
-	// Final correction                        /////////////////////// COULD THIS ME REMOVED? RANGE TO [0, 2p]?
+	// Final correction                        
 	mov    rsi, [rip+p]
 	mov    rcx, [rip+p+8]
 	mov    rdx, [rip+p+16]
@@ -595,7 +595,7 @@ fp_mul3: _fp_mul3:
 
 	FPMUL256x256 [rcx], [rsi], r8, r9, r10, r11, r12, r13, r14
 
-	// Final correction                        /////////////////////// COULD THIS ME REMOVED? RANGE TO [0, 2p]?
+	// Final correction                        
 	mov    rsi, [rip+p]
 	mov    rcx, [rip+p+8]
 	mov    rdx, [rip+p+16]
